@@ -1,2 +1,2 @@
 # js-rock-paper-scissors
-Short JS project coding Rock-Paper-Scissors
+Simple JS warm-up project coding Rock-Paper-Scissors
