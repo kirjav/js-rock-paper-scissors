@@ -1,6 +1,7 @@
 let humanScore = 0;
 let computerScore = 0;
 
+// Generated Random Integer between the numbers 1 and 3 using floor / ceiling to constrain the numbers generated to spit out whole integers.
 function getRandomInt(){
     const minCeiled = Math.ceil(1);
     const maxFloored = Math.floor(3);
@@ -8,6 +9,7 @@ function getRandomInt(){
     return result;
 }
 
+// Randomly generate the Computer's Choice
 function getComputerChoice() {
 
     var computerChoice = ""
@@ -28,9 +30,11 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+// Get the Human choice via a browser prompt window. 
 function getHumanChoice(){
     let humanChoice = prompt("Please Enter Your Choice");
     console.log(humanChoice)
+    //If the user enters an incorrect value we ask again until we receive valid input.
     while (humanChoice.toLowerCase() !== "rock" && humanChoice.toLowerCase() !== "paper" && humanChoice.toLowerCase() !== "scissors"){
         humanChoice = prompt("Invalid Input. Please Enter Your Choice:");
     }
@@ -108,6 +112,7 @@ function playRound(){
 
 }
 
+// Function to Play a Game of RPS with a max Rounds of 5
 function playGame(){
     let maxRounds = 5;
     let currentRound = 1;
