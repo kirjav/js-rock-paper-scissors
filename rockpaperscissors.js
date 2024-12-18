@@ -104,7 +104,27 @@ function playRound(humanChoice){
     document.getElementById("Player_Score").innerHTML = "Player Score: " + humanScore;
     document.getElementById("Computer_Score").innerHTML = "Computer Score: " + computerScore;
 
+    if(humanScore == 5 || computerScore == 5) {
+        announceWinner();
+    }
+
 }
+
+function announceWinner(){
+    [].forEach.call(document.querySelectorAll('.during_game'), function (el) {
+        el.style.display = 'None';
+      });
+
+      [].forEach.call(document.querySelectorAll('.winning_screen'), function (el) {
+        el.style.display = 'block';
+      });
+
+    // Hide Selection Button
+    // Enable Player Again Button
+    // Announce winner
+
+}
+
 
 // Function to Play a Game of RPS with a max Rounds of 5
 function playGame(){
