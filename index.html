@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <script src="rockpaperscissors.js"></script>
@@ -15,6 +16,8 @@
         <input type="button" value="Paper" onclick="getHumanChoice(this.value)">
         <input type="button" value="Scissors" onclick="getHumanChoice(this.value)">
     </div>
-    <div class="winning_screen">wow someone won!</div>
+    <div class="winning_screen">wow someone won!
+        <button onclick="playAgain()">Play Again!</button>
+    </div>
 </body>
 </html>

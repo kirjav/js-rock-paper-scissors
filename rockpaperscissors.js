@@ -125,6 +125,24 @@ function announceWinner(){
 
 }
 
+function playAgain(){
+    [].forEach.call(document.querySelectorAll('.during_game'), function (el) {
+        el.style.display = 'block';
+      });
+
+      [].forEach.call(document.querySelectorAll('.winning_screen'), function (el) {
+        el.style.display = 'None';
+      });
+
+      humanScore = 0;
+      computerScore = 0;
+
+      document.getElementById("Player_Score").innerHTML = "Player Score: " + humanScore;
+      document.getElementById("Computer_Score").innerHTML = "Computer Score: " + computerScore;
+
+
+}
+
 
 // Function to Play a Game of RPS with a max Rounds of 5
 function playGame(){
