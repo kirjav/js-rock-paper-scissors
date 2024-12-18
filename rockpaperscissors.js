@@ -30,19 +30,13 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-// Get the Human choice via a browser prompt window. 
-function getHumanChoice(){
-    let humanChoice = prompt("Please Enter Your Choice");
-    console.log(humanChoice)
-    //If the user enters an incorrect value we ask again until we receive valid input.
-    while (humanChoice.toLowerCase() !== "rock" && humanChoice.toLowerCase() !== "paper" && humanChoice.toLowerCase() !== "scissors"){
-        humanChoice = prompt("Invalid Input. Please Enter Your Choice:");
-    }
-    return humanChoice;
+// Get the Human choice via a button click value window. 
+function getHumanChoice(humanChoice){
+
+    playRound(humanChoice);
 }
 
-function playRound(){
-    let humanChoice = getHumanChoice();
+function playRound(humanChoice){
     let computerChoice = getComputerChoice();
     console.log("Human chooses " + humanChoice);
     console.log("Computer chooses " + computerChoice);
@@ -56,7 +50,6 @@ function playRound(){
             switch(computerChoice.toLowerCase()){
                 case "scissors":
                     console.log("It's a draw! Try again.")
-                    playRound();
                     break;
                 case "rock":
                     console.log("You lose! Rock beats Scissors!");
@@ -78,7 +71,6 @@ function playRound(){
                     break;
                 case "rock":
                     console.log("It's a draw! Try again.");
-                    playRound();
                     break;
                 case "paper":
                     console.log("You lose! Paper beats Rock!");
@@ -100,7 +92,6 @@ function playRound(){
                     break;
                 case "paper":
                     console.log("It's a draw! Try again.");
-                    playRound();
                     break;
                 default:
                     console.log("Invalid Computer Input");
@@ -109,6 +100,9 @@ function playRound(){
         default:
             console.log("invalid human input");
     }
+
+    document.getElementById("Player_Score").innerHTML = "Player Score: " + humanScore;
+    document.getElementById("Computer_Score").innerHTML = "Computer Score: " + computerScore;
 
 }
 
@@ -135,5 +129,5 @@ function playGame(){
     }
 }
 
-playGame();
+
 
